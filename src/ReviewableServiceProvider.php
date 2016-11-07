@@ -2,7 +2,9 @@
 
 namespace BrianFaust\Reviewable;
 
-class ServiceProvider extends \BrianFaust\ServiceProvider\ServiceProvider
+use BrianFaust\ServiceProvider\ServiceProvider;
+
+class ReviewableServiceProvider extends ServiceProvider
 {
     public function boot()
     {

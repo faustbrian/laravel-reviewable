@@ -1,8 +1,8 @@
 <?php
 
-namespace BrianFaust\Reviewable\Models;
+namespace BrianFaust\Reviewable;
 
-use BrianFaust\Database\Traits\Models\PresentableTrait;
+use BrianFaust\Database\Traits\PresentableTrait;
 use BrianFaust\Reviewable\Presenters\ReviewPresenter;
 use Illuminate\Database\Eloquent\Model;
 

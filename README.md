@@ -28,16 +28,15 @@ php artisan vendor:publish --provider="BrianFaust\Reviewable\ReviewableServicePr
 ``` php
 <?php
 
-
 namespace App;
 
-use BrianFaust\Reviewable\Contracts\Reviewable;
-use BrianFaust\Reviewable\Traits\Reviewable as ReviewableTrait;
+use BrianFaust\Reviewable\HasReviewsTrait;
+use BrianFaust\Reviewable\Interfaces\HasReviews;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model implements Reviewable
+class Post extends Model implements HasReviews
 {
-    use ReviewableTrait;
+    use HasReviewsTrait;
 }
 ```
 

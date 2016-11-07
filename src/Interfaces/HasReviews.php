@@ -1,10 +1,10 @@
 <?php
 
-namespace BrianFaust\Reviewable\Contracts;
+namespace BrianFaust\Reviewable\Interfaces;
 
 use Illuminate\Database\Eloquent\Model;
 
-interface Reviewable
+interface HasReviews
 {
     public function reviews();
 

@@ -2,10 +2,10 @@
 
 namespace BrianFaust\Reviewable\Traits;
 
-use BrianFaust\Reviewable\Models\Review;
+use BrianFaust\Reviewable\Review;
 use Illuminate\Database\Eloquent\Model;
 
-trait Reviewable
+trait HasReviewsTrait
 {
     public function reviews()
     {
