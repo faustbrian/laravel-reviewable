@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Reviewable\Traits;
+namespace BrianFaust\Reviewable;
 
 use BrianFaust\Reviewable\Review;
 use Illuminate\Database\Eloquent\Model;
