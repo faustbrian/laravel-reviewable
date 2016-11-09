@@ -8,7 +8,7 @@ interface HasReviews
 {
     public function reviews();
 
-    public function review($data, Model $author, Model $parent = null);
+    public function createReview($data, Model $author, Model $parent = null);
 
     public function updateReview($id, $data, Model $parent = null);
 
