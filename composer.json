@@ -20,7 +20,7 @@
     "require": {
         "php": "^5.5 || ^7.0",
         "faustbrian/laravel-service-provider": "^1.0",
-        "faustbrian/eloquent-presenter": "^1.0",
+        "faustbrian/eloquent-presenter": "^2.0",
         "illuminate/database": "5.1.* || 5.2.* || 5.3.*"
     },
     "require-dev": {

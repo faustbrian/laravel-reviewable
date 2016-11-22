@@ -2,13 +2,13 @@
 
 namespace BrianFaust\Reviewable;
 
-use BrianFaust\Eloquent\Presenter\PresentableTrait;
+use BrianFaust\Presenter\Presentable;
 use BrianFaust\Reviewable\Presenters\ReviewPresenter;
 use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    use PresentableTrait;
+    use Presentable;
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
