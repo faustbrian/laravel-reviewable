@@ -8,6 +8,6 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
 {
     protected function getServiceProviderClass($app)
     {
-        return \BrianFaust\Reviewable\ServiceProvider::class;
+        return \BrianFaust\Reviewable\ReviewableServiceProvider::class;
     }
 }

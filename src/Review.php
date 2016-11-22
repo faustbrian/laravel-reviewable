@@ -2,7 +2,7 @@
 
 namespace BrianFaust\Reviewable;
 
-use BrianFaust\Database\Traits\PresentableTrait;
+use BrianFaust\Eloquent\Presenter\PresentableTrait;
 use BrianFaust\Reviewable\Presenters\ReviewPresenter;
 use Illuminate\Database\Eloquent\Model;
 
