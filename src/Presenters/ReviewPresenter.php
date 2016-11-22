@@ -2,7 +2,7 @@
 
 namespace BrianFaust\Reviewable\Presenters;
 
-use BrianFaust\Database\Presenters\BasePresenter;
+use BrianFaust\Eloquent\Presenter\BasePresenter;
 
 class ReviewPresenter extends BasePresenter
 {
