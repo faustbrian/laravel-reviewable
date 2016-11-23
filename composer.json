@@ -1,27 +1,18 @@
 {
     "name": "faustbrian/laravel-reviewable",
     "description": "Reviewable Polymorphic Eloquent Models for Laravel 5",
-    "keywords": [
-        "laravel",
-        "framework",
-        "Laravel-messageable",
-        "Laravel Messageable",
-        "Brian Faust",
-        "faustbrian",
-        "laravel-reviewable"
-    ],
+    "keywords": ["laravel", "framework", "Laravel-reviewable", "Laravel Reviewable", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
         "email": "hello@brianfaust.de",
-        "homepage": "https://brianfaust.de",
-        "role": "Developer"
+        "homepage": "https://brianfaust.de"
     }],
     "require": {
-        "php": "^5.6.4 || ^7.0",
+        "php": "^7.0",
         "faustbrian/laravel-service-provider": "^1.0",
         "faustbrian/eloquent-presenter": "^2.0",
-        "illuminate/database": "5.2.* || 5.3.*"
+        "illuminate/database": "5.3.*"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.2",
