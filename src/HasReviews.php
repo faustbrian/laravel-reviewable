@@ -17,26 +17,33 @@ trait HasReviews
 {
     public function reviews()
     {
-        return $this->morphMany(Review::class, 'reviewable');
+        return $this->morphMany(config('reviewable.models.review'), 'reviewable');
     }
 
     public function createReview($data, Model $author, Model $parent = null)
     {
-        return (new Review())->createReview($this, $data, $author);
+        return $this->getNewReviewMode()->createReview($this, $data, $author);
     }
 
     public function updateReview($id, $data, Model $parent = null)
     {
-        return (new Review())->updateReview($id, $data);
+        return $this->getNewReviewMode()->updateReview($id, $data);
     }
 
     public function deleteReview($id)
     {
-        return (new Review())->deleteReview($id);
+        return $this->getNewReviewMode()->deleteReview($id);
     }
 
     public function getRating()
     {
         return round($this->reviews()->avg('rating'));
+    }
+
+    private function getNewReviewMode()
+    {
+        $model = config('reviewable.models.review');
+
+        return new $model;
     }
 }

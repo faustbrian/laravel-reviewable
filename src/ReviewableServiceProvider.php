@@ -15,11 +15,31 @@ use BrianFaust\ServiceProvider\ServiceProvider;
 
 class ReviewableServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap the application services.
+     */
     public function boot()
     {
         $this->publishMigrations();
+
+        $this->publishConfig();
     }
 
+    /**
+     * Register the application services.
+     */
+    public function register()
+    {
+        parent::register();
+
+        $this->mergeConfig();
+    }
+
+    /**
+     * Get the default package name.
+     *
+     * @return string
+     */
     public function getPackageName()
     {
         return 'reviewable';

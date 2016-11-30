@@ -11,14 +11,10 @@
 
 namespace BrianFaust\Reviewable;
 
-use BrianFaust\Presenter\Presentable;
-use BrianFaust\Reviewable\Presenters\ReviewPresenter;
 use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    use Presentable;
-
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function reviewable()
@@ -55,10 +51,5 @@ class Review extends Model
     public function deleteReview($id)
     {
         return static::find($id)->delete();
-    }
-
-    public function getPresenterClass()
-    {
-        return ReviewPresenter::class;
     }
 }
