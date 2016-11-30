@@ -22,17 +22,17 @@ trait HasReviews
 
     public function createReview($data, Model $author, Model $parent = null)
     {
-        return $this->getNewReviewMode()->createReview($this, $data, $author);
+        return $this->getNewReviewModel()->createReview($this, $data, $author);
     }
 
     public function updateReview($id, $data, Model $parent = null)
     {
-        return $this->getNewReviewMode()->updateReview($id, $data);
+        return $this->getNewReviewModel()->updateReview($id, $data);
     }
 
     public function deleteReview($id)
     {
-        return $this->getNewReviewMode()->deleteReview($id);
+        return $this->getNewReviewModel()->deleteReview($id);
     }
 
     public function getRating()
@@ -40,7 +40,7 @@ trait HasReviews
         return round($this->reviews()->avg('rating'));
     }
 
-    private function getNewReviewMode()
+    protected function getNewReviewModel()
     {
         $model = config('reviewable.models.review');
 
