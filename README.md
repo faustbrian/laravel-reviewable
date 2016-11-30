@@ -30,13 +30,12 @@ php artisan vendor:publish --provider="BrianFaust\Reviewable\ReviewableServicePr
 
 namespace App;
 
-use BrianFaust\Reviewable\HasReviewsTrait;
-use BrianFaust\Reviewable\Interfaces\HasReviews;
+use BrianFaust\Reviewable\HasReviews;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model implements HasReviews
+class Post extends Model
 {
-    use HasReviewsTrait;
+    use HasReviews;
 }
 ```
 
@@ -45,7 +44,7 @@ class Post extends Model implements HasReviews
 $user = User::first();
 $post = Post::first();
 
-$review = $post->review([
+$review = $post->createReview([
     'title' => 'Some title',
     'body' => 'Some body',
     'rating' => 5,

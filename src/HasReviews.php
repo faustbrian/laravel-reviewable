@@ -13,7 +13,7 @@ namespace BrianFaust\Reviewable;
 
 use Illuminate\Database\Eloquent\Model;
 
-trait HasReviewsTrait
+trait HasReviews
 {
     public function reviews()
     {
