@@ -44,6 +44,6 @@ trait HasReviews
     {
         $model = config('reviewable.models.review');
 
-        return new $model;
+        return new $model();
     }
 }
