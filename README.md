@@ -11,9 +11,7 @@ $ composer require faustbrian/laravel-reviewable
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    BrianFaust\Reviewable\ReviewableServiceProvider::class
-];
+BrianFaust\Reviewable\ReviewableServiceProvider::class
 ```
 
 To get started, you'll need to publish the vendor assets and migrate:
