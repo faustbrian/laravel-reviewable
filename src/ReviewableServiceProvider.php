@@ -22,9 +22,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Reviewable;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use BrianFaust\ServiceProvider\AbstractServiceProvider;
 
-class ReviewableServiceProvider extends ServiceProvider
+class ReviewableServiceProvider extends AbstractServiceProvider
 {
     /**
      * Bootstrap the application services.
