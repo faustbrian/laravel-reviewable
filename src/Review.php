@@ -23,22 +23,23 @@ declare(strict_types=1);
 namespace BrianFaust\Reviewable;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Review extends Model
 {
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function reviewable()
+    public function reviewable(): MorphTo
     {
         return $this->morphTo();
     }
 
-    public function author()
+    public function author(): MorphTo
     {
         return $this->morphTo('author');
     }
 
-    public function createReview(Model $reviewable, $data, Model $author)
+    public function createReview(Model $reviewable, $data, Model $author): bool
     {
         $review = new static();
         $review->fill(array_merge($data, [
@@ -46,21 +47,16 @@ class Review extends Model
             'author_type' => get_class($author),
         ]));
 
-        $reviewable->reviews()->save($review);
-
-        return $review;
+        return (bool) $reviewable->reviews()->save($review);
     }
 
-    public function updateReview($id, $data)
+    public function updateReview($id, $data): bool
     {
-        $review = static::find($id);
-        $review->update($data);
-
-        return $review;
+        return (bool) static::find($id)->update($data);
     }
 
-    public function deleteReview($id)
+    public function deleteReview($id): bool
     {
-        return static::find($id)->delete();
+        return (bool) static::find($id)->delete();
     }
 }

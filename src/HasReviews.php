@@ -23,35 +23,36 @@ declare(strict_types=1);
 namespace BrianFaust\Reviewable;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasReviews
 {
-    public function reviews()
+    public function reviews(): MorphMany
     {
         return $this->morphMany(config('reviewable.models.review'), 'reviewable');
     }
 
-    public function createReview($data, Model $author, Model $parent = null)
+    public function createReview($data, Model $author, Model $parent = null): Review
     {
-        return $this->getNewReviewModel()->createReview($this, $data, $author);
+        return $this->getReviewModel()->createReview($this, $data, $author);
     }
 
-    public function updateReview($id, $data, Model $parent = null)
+    public function updateReview($id, $data, Model $parent = null): bool
     {
-        return $this->getNewReviewModel()->updateReview($id, $data);
+        return $this->getReviewModel()->updateReview($id, $data);
     }
 
-    public function deleteReview($id)
+    public function deleteReview($id): bool
     {
-        return $this->getNewReviewModel()->deleteReview($id);
+        return $this->getReviewModel()->deleteReview($id);
     }
 
-    public function getRating()
+    public function getRating(): float
     {
         return round($this->reviews()->avg('rating'));
     }
 
-    protected function getNewReviewModel()
+    protected function getReviewModel(): Model
     {
         $model = config('reviewable.models.review');
 
