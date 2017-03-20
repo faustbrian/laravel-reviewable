@@ -23,7 +23,7 @@ trait HasReviews
         return $this->morphMany(config('reviewable.models.review'), 'reviewable');
     }
 
-    public function createReview($data, Model $author, Model $parent = null): Review
+    public function createReview($data, Model $author, Model $parent = null): bool
     {
         return $this->getReviewModel()->createReview($this, $data, $author);
     }
