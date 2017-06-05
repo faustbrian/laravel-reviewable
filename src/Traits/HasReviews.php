@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Reviewable.
  *
@@ -12,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Reviewable;
+namespace BrianFaust\Reviewable\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
@@ -21,7 +18,7 @@ trait HasReviews
 {
     public function reviews(): MorphMany
     {
-        return $this->morphMany(config('reviewable.models.review'), 'reviewable');
+        return $this->morphMany(config('laravel-reviewable.models.review'), 'reviewable');
     }
 
     public function createReview($data, Model $author, Model $parent = null): bool
@@ -46,7 +43,7 @@ trait HasReviews
 
     protected function getReviewModel(): Model
     {
-        $model = config('reviewable.models.review');
+        $model = config('laravel-reviewable.models.review');
 
         return new $model();
     }

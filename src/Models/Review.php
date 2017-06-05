@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Reviewable.
  *
@@ -12,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Reviewable;
+namespace BrianFaust\Reviewable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -35,7 +32,7 @@ class Review extends Model
     {
         $review = new static();
         $review->fill(array_merge($data, [
-            'author_id'   => $author->id,
+            'author_id' => $author->id,
             'author_type' => get_class($author),
         ]));
 
