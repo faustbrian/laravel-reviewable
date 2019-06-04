@@ -1,22 +1,22 @@
 # Laravel Reviewable
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Reviewable/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Reviewable)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-reviewable.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Reviewable.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Reviewable/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Reviewable.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Reviewable)
+[![Build Status](https://img.shields.io/travis/artisanry/Reviewable/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Reviewable)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/reviewable.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/Reviewable.svg?style=flat-square)](https://github.com/artisanry/Reviewable/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/Reviewable.svg?style=flat-square)](https://packagist.org/packages/artisanry/Reviewable)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-reviewable
+$ composer require artisanry/reviewable
 ```
 
 To get started, you'll need to publish the vendor assets and migrate:
 
 ```
-php artisan vendor:publish --provider="BrianFaust\Reviewable\ReviewableServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="Artisanry\Reviewable\ReviewableServiceProvider" && php artisan migrate
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ php artisan vendor:publish --provider="BrianFaust\Reviewable\ReviewableServicePr
 
 namespace App;
 
-use BrianFaust\Reviewable\HasReviews;
+use Artisanry\Reviewable\HasReviews;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -72,7 +72,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -81,4 +81,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

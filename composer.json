@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-reviewable",
+    "name": "artisanry/reviewable",
     "description": "Reviewable Polymorphic Eloquent Models for Laravel 5",
-    "keywords": ["laravel", "framework", "Laravel-reviewable", "Laravel Reviewable", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-reviewable", "Laravel Reviewable"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Reviewable\\": "src/"
+            "Artisanry\\Reviewable\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Reviewable\\": "tests"
+            "Artisanry\\Tests\\Reviewable\\": "tests"
         }
     },
     "config": {
@@ -38,7 +38,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Reviewable\\ReviewableServiceProvider"
+                "Artisanry\\Reviewable\\ReviewableServiceProvider"
             ]
         }
     },
