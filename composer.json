@@ -1,15 +1,22 @@
 {
     "name": "artisanry/reviewable",
     "description": "Reviewable Polymorphic Eloquent Models for Laravel 5",
-    "keywords": ["laravel", "framework", "Laravel-reviewable", "Laravel Reviewable"],
+    "keywords": [
+        "laravel",
+        "framework",
+        "Laravel-reviewable",
+        "Laravel Reviewable"
+    ],
     "license": "MIT",
-    "authors": [{
-        "name": "Brian Faust",
-        "email": "hello@basecode.sh",
-        "homepage": "https://basecode.sh"
-    }],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "homepage": "https://basecode.sh"
+        }
+    ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "illuminate/support": "^5.8",
         "illuminate/database": "^5.8"
     },
