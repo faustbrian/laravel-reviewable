@@ -27,7 +27,7 @@ return [
         |--------------------------------------------------------------------------
         */
 
-        'review' => \Artisanry\Reviewable\Review::class,
+        'review' => \Artisanry\Reviewable\Models\Review::class,
 
     ],
 

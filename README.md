@@ -27,7 +27,7 @@ php artisan vendor:publish --provider="Artisanry\Reviewable\ReviewableServicePro
 
 namespace App;
 
-use Artisanry\Reviewable\HasReviews;
+use Artisanry\Reviewable\Traits\HasReviews;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
